@@ -38,8 +38,14 @@ def interactive_plot(df, title):
 
 **Normalization**
 
-
-
+```
+# Function to normalize stock prices based on their initial price
+def normalize(df):
+  x = df.copy()
+  for i in x.columns[1:]:
+    x[i] = x[i]/x[i][0]
+  return x
+```
 
 ## III. 
 **Metrics**
@@ -57,7 +63,7 @@ There are many metrics for accuracy like R2, MAE, etc.
 I chose to use MSE/RMSE because they explicitly show the deviation of the prediction for continuous variables from the actual dataset. So, they fit in this project to measure the accuracy.
 
 
-![](rmse.gif)
+![](IMAGES/rmse.gif)
 
 It measures the average magnitude of the error and ranges from 0 to infinity. The errors are squared and then they are averaged, MSE/RMSE gives a relatively high weight to large errors, and the errors in stock price prediction can be critical, so it is appropriate metric to penalize the large errors.
 

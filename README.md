@@ -32,7 +32,6 @@ def interactive_plot(df, title):
 ```
 ![](Stock price_EDA.png)
 
-
 ## III. 
 **Metrics**
 

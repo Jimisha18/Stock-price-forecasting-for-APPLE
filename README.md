@@ -1,14 +1,14 @@
-# Stock-price-prediction for APPLE
+**# Stock-price-prediction for APPLE**
+
 **Environment or libraries used**
 
 * Google Colab
-Python 3
-Numpy
-Pandas
-Sklearn
-Matplotlib
-Keras
-Jupyter notebook
+* Python 3
+* Numpy
+* Pandas
+* Sklearn
+* Matplotlib
+* Keras
 
 ## I. Project Definition
 

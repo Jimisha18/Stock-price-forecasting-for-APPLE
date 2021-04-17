@@ -1,10 +1,9 @@
 # Stock-price-prediction for APPLE
 
-## I. Project Definition
+## I. DEFINE PROBLEM
 
 Machine learning and deep learning have been transforming finance and investement industry. AI powered trading coulf potentially reduce the risk and maximize returns. So the goal of the project is to leverage a model to predict the future stock prices. By accurately predicting stock prices, investors can maximize returns and can get an idea as to when they should buy or sell securities. The AI/ML model will be trained using a type of recurrent neural network(RNN)know as long short term memory networks(LSTM).Investment firms have adopted machine learning in recent years rapidly, even some firms have started replacing humans with A.I. to make investment decisions.In this project, 100 days stock closing values is used to predict the next day's stock price. 
 
-## II. Load the libraries and data
 **Environment or libraries used**
 
 * Google Colab
@@ -19,10 +18,12 @@ Machine learning and deep learning have been transforming finance and investemen
 
 ./data directory contains .csv files
 
-![Optional Text](../IMAGES/stock_price_data.png)
+![stock_price_data.png](https://github.com/Jimisha18/Stock-price-forecasting-for-APPLE/blob/main/IMAGES/stock_price_data.png)
 
 
-## II. Exploratory Data Analysis
+## II. DISCOVER
+**Exploratory Data analysis**
+
 ```python
 # Function to plot interactive plots 
 def interactive_plot(df, title):
@@ -33,7 +34,12 @@ def interactive_plot(df, title):
 
 ```
 
-<img src="stock price_EDA.png">
+![stock price_EDA.png](https://github.com/Jimisha18/Stock-price-forecasting-for-APPLE/blob/main/IMAGES/Stock%20price_EDA.png)
+
+**Normalization**
+
+
+
 
 ## III. 
 **Metrics**
@@ -54,3 +60,6 @@ I chose to use MSE/RMSE because they explicitly show the deviation of the predic
 ![](rmse.gif)
 
 It measures the average magnitude of the error and ranges from 0 to infinity. The errors are squared and then they are averaged, MSE/RMSE gives a relatively high weight to large errors, and the errors in stock price prediction can be critical, so it is appropriate metric to penalize the large errors.
+
+
+

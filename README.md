@@ -1,4 +1,4 @@
-**# Stock-price-prediction for APPLE
+# Stock-price-prediction for APPLE
 
 **Environment or libraries used**
 

@@ -31,7 +31,7 @@ def interactive_plot(df, title):
 
 ```
 
-![alt text](Stock price_EDA.png "Title")
+!<img src="stock price_EDA">
 
 ## III. 
 **Metrics**

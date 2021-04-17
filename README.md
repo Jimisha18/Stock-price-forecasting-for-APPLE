@@ -1,4 +1,4 @@
-# ** Stock-price-prediction for APPLE**
+**# Stock-price-prediction for APPLE
 
 **Environment or libraries used**
 
@@ -25,7 +25,7 @@ In this project, 100 days stock closing values is used to predict the next day's
 
 
 
-
+## III. 
 **Metrics**
 
 To determine how accurate the prediction is, we analyze the difference between the predicted and the actual adjusted close price. Smaller the difference indicates better accuracy.

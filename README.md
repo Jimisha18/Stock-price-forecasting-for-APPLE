@@ -1,6 +1,7 @@
 # Stock-price-prediction for APPLE
 **Environment or libraries used**
-Google Colab
+
+* Google Colab
 Python 3
 Numpy
 Pandas

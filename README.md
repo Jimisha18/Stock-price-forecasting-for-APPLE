@@ -31,7 +31,7 @@ def interactive_plot(df, title):
 
 ```
 
-<img src="stock price_EDA.png" width=125 height=100>
+<img src="stock price_EDA.png">
 
 ## III. 
 **Metrics**

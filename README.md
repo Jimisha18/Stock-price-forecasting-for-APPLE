@@ -1,4 +1,4 @@
-**# Stock-price-prediction for APPLE**
+# ** Stock-price-prediction for APPLE**
 
 **Environment or libraries used**
 
@@ -9,6 +9,10 @@
 * Sklearn
 * Matplotlib
 * Keras
+
+**Datasets**
+
+./data directory contains .csv files
 
 ## I. Project Definition
 

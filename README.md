@@ -21,8 +21,16 @@ Machine learning and deep learning have been transforming finance and investemen
 In this project, 100 days stock closing values is used to predict the next day's stock price. This is
 
 ## II. Exploratory Data Analysis
+```python
+# Function to plot interactive plots 
+def interactive_plot(df, title):
+  fig = px.line(title = title)
+  for i in df.columns[1:]:
+    fig.add_scatter(x = df['Date'], y = df[i], name = i)
+  fig.show()
 
-
+```
+![](Stock price_EDA.png)
 
 
 ## III. 

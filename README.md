@@ -30,7 +30,7 @@ def interactive_plot(df, title):
   fig.show()
 
 ```
-![](Stock price_EDA.png)
+![Stock price_EDA.png]/(Stock price_EDA.png)
 
 ## III. 
 **Metrics**

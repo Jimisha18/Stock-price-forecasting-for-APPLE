@@ -1,7 +1,7 @@
 # Stock-price-prediction for APPLE
 
-##I. Definition
-Project Overview
+## I. Definition
+### Project Overview
 
 Machine learning and deep learning have been transforming finance and investement industry. AI powered trading coulf potentially reduce the risk and maximize returns. So the goal of the project is to leverage a model to predict the future stock prices. By accurately predicting stock prices, investors can maximize returns and can get an idea as to when they should buy or sell securities. The AI/ML model will be trained using a type of recurrent neural network(RNN)know as long short term memory networks(LSTM).
 

@@ -135,7 +135,7 @@ It measures the average magnitude of the error and ranges from 0 to infinity. Th
 * The orange indicates the train predict
 * The green indicates the test predict
 
-# PREDICT FUTURE 30 DAYS STOCK PRICE
+## PREDICT FUTURE 30 DAYS STOCK PRICE
 
 After the 2059th stock price of Apple, new stock price for 30 days was predicted which can be shown in the graph below.
 

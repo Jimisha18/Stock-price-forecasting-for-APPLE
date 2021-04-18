@@ -47,7 +47,55 @@ def normalize(df):
   return x
 ```
 
-## III. 
+![Normalized%20stock%20prices.png](https://github.com/Jimisha18/Stock-price-forecasting-for-APPLE/blob/main/IMAGES/Normalized%20stock%20prices.png)
+
+**Focussing on Apple stock**
+```
+# Function to get the stock price of an individual company we are focusing on to do the stock price prediction
+def individual_stock(price_df, name):
+    return pd.DataFrame({'Date': price_df['Date'], 'Close': price_df[name]})
+```
+
+![Stock_price_APPLE.png](https://github.com/Jimisha18/Stock-price-forecasting-for-APPLE/blob/main/IMAGES/Stock_price_APPLE.png)
+
+## III. DEVELOP
+**Splitting the dataset of the Apple stock prices into 65% training and 35% testing data**
+
+**Creating the trading data window**
+
+```
+# convert an array of values into a dataset matrix
+import numpy as np
+
+def create_dataset(dataset, time_step):
+	dataX, dataY = [], []
+	for i in range(len(dataset)-time_step-1):
+		a = dataset[i:(i+time_step), 0]   ###i=0, 0,1,2,3-----99   100 
+		dataX.append(a)
+		dataY.append(dataset[i + time_step, 0])
+	return np.array(dataX), np.array(dataY)
+
+```
+
+Create the dataset of train and test as per the time stamp of 100. So, for every 100 training sample there is one test sample received.
+
+### CREATE LSTM MODEL TO PREDICT THE STOCK PRICES
+### Create the Stacked LSTM model
+
+Looking at the data set I decided to use Recurrent neural network specifically LSTM to train my model.
+```
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
+from tensorflow.keras.layers import LSTM
+from tensorflow.keras.layers import Dense, Embedding, LSTM, Dropout, Flatten
+model=Sequential()
+model.add(LSTM(50,return_sequences=True,input_shape=(100,1)))
+model.add(LSTM(50,return_sequences=True))
+model.add(LSTM(50))
+model.add(Dense(1))
+model.compile(loss='mean_squared_error',optimizer='adam')
+```
+ 
 **Metrics**
 
 To determine how accurate the prediction is, we analyze the difference between the predicted and the actual adjusted close price. Smaller the difference indicates better accuracy.
@@ -56,7 +104,7 @@ I chose both Mean Squared Error (MSE) and Root Mean Squared Error (RMSE) as a me
 
 Also, by visualizing the predicted price and the actual price with a plot or a graph, it can tell how close the prediction is clearly.
 
-Why I use MSE/RMSE for the metric?
+**Why I use MSE/RMSE for the metric?**
 
 There are many metrics for accuracy like R2, MAE, etc.
 
@@ -65,7 +113,21 @@ I chose to use MSE/RMSE because they explicitly show the deviation of the predic
 
 ![](IMAGES/rmse.gif)
 
-It measures the average magnitude of the error and ranges from 0 to infinity. The errors are squared and then they are averaged, MSE/RMSE gives a relatively high weight to large errors, and the errors in stock price prediction can be critical, so it is appropriate metric to penalize the large errors.
+It measures the average magnitude of the error and ranges from 0 to infinity. The errors are squared and then they are averaged, MSE/RMSE gives a relatively high weight to large errors, and the errors in stock price prediction can be critical, so it is appropriate metric to penalize the large errors. 
 
+**The RMSE of test predict is 232**
 
+## **ACTUAL VERSUS PREDICTED STOCK PRICES OF THE APPLE STOCK MARKET**
+
+![Stock%20price_actual_predicted.png](https://github.com/Jimisha18/Stock-price-forecasting-for-APPLE/blob/main/IMAGES/Stock%20price_actual_predicted.png)
+
+* The blue graph indicates the actual data
+* The orange indicates the train predict
+* The green indicates the test predict
+
+# PREDICT FUTURE 30 DAYS STOCK PRICE
+
+After the 2059th stock price of Apple, new stock price for 30 days was predicted which can be shown in the graph below.
+
+![Predict_future30days.png](https://github.com/Jimisha18/Stock-price-forecasting-for-APPLE/blob/main/IMAGES/Predict_future30days.png)
 

@@ -36,6 +36,9 @@ def interactive_plot(df, title):
 
 ![stock price_EDA.png](https://github.com/Jimisha18/Stock-price-forecasting-for-APPLE/blob/main/IMAGES/Stock%20price_EDA.png)
 
+* The stock prices of all the companies are plotted using the interactive plot which helps to find exact stock price at a given month or year of the time.
+* Analyzing the chart above it can be inferred that S&P 500 maintained the maximum stock price in the market and the S&P 500 stock price gradually increases with the time
+
 **Normalization**
 
 ```
@@ -48,6 +51,10 @@ def normalize(df):
 ```
 
 ![Normalized%20stock%20prices.png](https://github.com/Jimisha18/Stock-price-forecasting-for-APPLE/blob/main/IMAGES/Normalized%20stock%20prices.png)
+
+* The normalised plot shown above gives us a really awesome knowledge about the consistency of stock prices. For an instance AAPL and S&P 500 enjoyed very consistent stock shares since a decade.
+* On the other hand, one can clearly visualise the normalized stock price of companies like TESLA and which surged somewhere after 2014 and there value just became 50 times in 2020 with the invent of self driving cars and new technology.
+* On the same note, Amazon sharply sparkled after 2018 when everyone wants to shop online and with the pandemic everyone wants to shop online making its market share value 18 times more.
 
 **Focussing on Apple stock**
 ```

@@ -171,3 +171,4 @@ plt.plot(day_pred,scaler.inverse_transform(lst_output))
 
 ![Predict_future30days.png](https://github.com/Jimisha18/Stock-price-forecasting-for-APPLE/blob/main/IMAGES/Predict_future30days.png)
 
+* The orange line shows the future 30 days forecast of Apple stock price

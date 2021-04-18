@@ -129,5 +129,45 @@ It measures the average magnitude of the error and ranges from 0 to infinity. Th
 
 After the 2059th stock price of Apple, new stock price for 30 days was predicted which can be shown in the graph below.
 
+```
+# demonstrate prediction for next 30 days
+from numpy import array
+
+lst_output=[]
+n_steps=100
+i=0
+while(i<30):
+    
+    if(len(temp_input)>100):
+        x_input=np.array(temp_input[1:])
+        #print("{} day input {}".format(i,x_input))
+        x_input=x_input.reshape(1,-1)
+        x_input = x_input.reshape((1, n_steps, 1))
+        yhat = model.predict(x_input, verbose=0)
+        print("{} day output {}".format(i,yhat))
+        temp_input.extend(yhat[0].tolist())
+        temp_input=temp_input[1:]
+        lst_output.extend(yhat.tolist())
+        i=i+1
+    else:
+        x_input = x_input.reshape((1, n_steps,1))
+        yhat = model.predict(x_input, verbose=0)
+        print(yhat[0])
+        temp_input.extend(yhat[0].tolist())
+        (len(temp_input))
+        lst_output.extend(yhat.tolist())
+        i=i+1
+
+print(lst_output)
+```
+
+```
+# Prediction of future 30 days stock price data
+import matplotlib.pyplot as plt
+
+plt.plot(day_new,df_apple[2059:])
+plt.plot(day_pred,scaler.inverse_transform(lst_output))
+```
+
 ![Predict_future30days.png](https://github.com/Jimisha18/Stock-price-forecasting-for-APPLE/blob/main/IMAGES/Predict_future30days.png)
 
